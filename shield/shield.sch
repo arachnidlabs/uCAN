@@ -164,6 +164,13 @@
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="V+">
+<wire x1="0.889" y1="-1.27" x2="0" y2="0.127" width="0.254" layer="94"/>
+<wire x1="0" y1="0.127" x2="-0.889" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-0.889" y1="-1.27" x2="0.889" y2="-1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="V+" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+5V" prefix="P+">
@@ -222,6 +229,19 @@
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="+3V3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="V+" prefix="P+">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="V+" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -1186,6 +1206,32 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="-6.35" y="6.35" size="1.27" layer="21">&gt;NAME</text>
 <text x="-6.35" y="-7.62" size="1.27" layer="21">&gt;VALUE</text>
 </package>
+<package name="SO08">
+<description>&lt;b&gt;Small Outline Package&lt;/b&gt; Fits JEDEC packages (narrow SOIC-8)</description>
+<wire x1="-2.362" y1="-1.803" x2="2.362" y2="-1.803" width="0.1524" layer="51"/>
+<wire x1="2.362" y1="-1.803" x2="2.362" y2="1.803" width="0.1524" layer="21"/>
+<wire x1="2.362" y1="1.803" x2="-2.362" y2="1.803" width="0.1524" layer="51"/>
+<wire x1="-2.362" y1="1.803" x2="-2.362" y2="-1.803" width="0.1524" layer="21"/>
+<circle x="-1.8034" y="-0.9906" radius="0.1436" width="0.2032" layer="21"/>
+<smd name="1" x="-1.905" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="2" x="-0.635" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="3" x="0.635" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="4" x="1.905" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="5" x="1.905" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="6" x="0.635" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="7" x="-0.635" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="8" x="-1.905" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
+<text x="-1.27" y="-0.635" size="0.4064" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="0" size="0.4064" layer="25">&gt;NAME</text>
+<rectangle x1="-2.0828" y1="-2.8702" x2="-1.7272" y2="-1.8542" layer="51"/>
+<rectangle x1="-0.8128" y1="-2.8702" x2="-0.4572" y2="-1.8542" layer="51"/>
+<rectangle x1="0.4572" y1="-2.8702" x2="0.8128" y2="-1.8542" layer="51"/>
+<rectangle x1="1.7272" y1="-2.8702" x2="2.0828" y2="-1.8542" layer="51"/>
+<rectangle x1="-2.0828" y1="1.8542" x2="-1.7272" y2="2.8702" layer="51"/>
+<rectangle x1="-0.8128" y1="1.8542" x2="-0.4572" y2="2.8702" layer="51"/>
+<rectangle x1="0.4572" y1="1.8542" x2="0.8128" y2="2.8702" layer="51"/>
+<rectangle x1="1.7272" y1="1.8542" x2="2.0828" y2="2.8702" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LM2595">
@@ -1214,6 +1260,20 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="2.54" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="0" y="15.24" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="MCP2562">
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="15.24" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="10.16" width="0.254" layer="94"/>
+<wire x1="15.24" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<pin name="TXD" x="-10.16" y="7.62" length="middle"/>
+<pin name="VSS" x="-10.16" y="5.08" length="middle"/>
+<pin name="VDD" x="-10.16" y="2.54" length="middle"/>
+<pin name="RXD" x="-10.16" y="0" length="middle"/>
+<pin name="VIO" x="20.32" y="0" length="middle" rot="R180"/>
+<pin name="CANL" x="20.32" y="2.54" length="middle" rot="R180"/>
+<pin name="CANH" x="20.32" y="5.08" length="middle" rot="R180"/>
+<pin name="STBY" x="20.32" y="7.62" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1245,6 +1305,29 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MCP2562" prefix="U">
+<description>CAN transceiver</description>
+<gates>
+<gate name="G$1" symbol="MCP2562" x="-2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="SO08">
+<connects>
+<connect gate="G$1" pin="CANH" pad="7"/>
+<connect gate="G$1" pin="CANL" pad="6"/>
+<connect gate="G$1" pin="RXD" pad="4"/>
+<connect gate="G$1" pin="STBY" pad="8"/>
+<connect gate="G$1" pin="TXD" pad="1"/>
+<connect gate="G$1" pin="VDD" pad="3"/>
+<connect gate="G$1" pin="VIO" pad="5"/>
+<connect gate="G$1" pin="VSS" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2139,82 +2222,6 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <connect gate="G$1" pin="TXCAN" pad="1"/>
 <connect gate="G$1" pin="VDD" pad="20"/>
 <connect gate="G$1" pin="VSS" pad="10"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="SparkFun-DigitalIC">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find all manner of digital ICs- microcontrollers, memory chips, logic chips, FPGAs, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="SO08">
-<description>&lt;b&gt;Small Outline Package&lt;/b&gt; Fits JEDEC packages (narrow SOIC-8)</description>
-<wire x1="-2.362" y1="-1.803" x2="2.362" y2="-1.803" width="0.1524" layer="51"/>
-<wire x1="2.362" y1="-1.803" x2="2.362" y2="1.803" width="0.1524" layer="21"/>
-<wire x1="2.362" y1="1.803" x2="-2.362" y2="1.803" width="0.1524" layer="51"/>
-<wire x1="-2.362" y1="1.803" x2="-2.362" y2="-1.803" width="0.1524" layer="21"/>
-<circle x="-1.8034" y="-0.9906" radius="0.1436" width="0.2032" layer="21"/>
-<smd name="1" x="-1.905" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="2" x="-0.635" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="3" x="0.635" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="4" x="1.905" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="5" x="1.905" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="6" x="0.635" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="7" x="-0.635" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<smd name="8" x="-1.905" y="2.6162" dx="0.6096" dy="2.2098" layer="1"/>
-<text x="-1.27" y="-0.635" size="0.4064" layer="27">&gt;VALUE</text>
-<text x="-1.27" y="0" size="0.4064" layer="25">&gt;NAME</text>
-<rectangle x1="-2.0828" y1="-2.8702" x2="-1.7272" y2="-1.8542" layer="51"/>
-<rectangle x1="-0.8128" y1="-2.8702" x2="-0.4572" y2="-1.8542" layer="51"/>
-<rectangle x1="0.4572" y1="-2.8702" x2="0.8128" y2="-1.8542" layer="51"/>
-<rectangle x1="1.7272" y1="-2.8702" x2="2.0828" y2="-1.8542" layer="51"/>
-<rectangle x1="-2.0828" y1="1.8542" x2="-1.7272" y2="2.8702" layer="51"/>
-<rectangle x1="-0.8128" y1="1.8542" x2="-0.4572" y2="2.8702" layer="51"/>
-<rectangle x1="0.4572" y1="1.8542" x2="0.8128" y2="2.8702" layer="51"/>
-<rectangle x1="1.7272" y1="1.8542" x2="2.0828" y2="2.8702" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MCP2551">
-<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="15.24" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-2.54" x2="15.24" y2="10.16" width="0.254" layer="94"/>
-<wire x1="15.24" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
-<pin name="TXD" x="-10.16" y="7.62" length="middle"/>
-<pin name="VSS" x="-10.16" y="5.08" length="middle"/>
-<pin name="VDD" x="-10.16" y="2.54" length="middle"/>
-<pin name="RXD" x="-10.16" y="0" length="middle"/>
-<pin name="VREF" x="20.32" y="0" length="middle" rot="R180"/>
-<pin name="CANL" x="20.32" y="2.54" length="middle" rot="R180"/>
-<pin name="CANH" x="20.32" y="5.08" length="middle" rot="R180"/>
-<pin name="RS" x="20.32" y="7.62" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="MCP2551" prefix="U">
-<description>CAN transceiver</description>
-<gates>
-<gate name="G$1" symbol="MCP2551" x="-2.54" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="SO08">
-<connects>
-<connect gate="G$1" pin="CANH" pad="7"/>
-<connect gate="G$1" pin="CANL" pad="6"/>
-<connect gate="G$1" pin="RS" pad="8"/>
-<connect gate="G$1" pin="RXD" pad="4"/>
-<connect gate="G$1" pin="TXD" pad="1"/>
-<connect gate="G$1" pin="VDD" pad="3"/>
-<connect gate="G$1" pin="VREF" pad="5"/>
-<connect gate="G$1" pin="VSS" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3877,7 +3884,7 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <part name="L1" library="nickparts" deviceset="MSS1260" device=""/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA-ALT"/>
 <part name="IC1" library="mcp2515" deviceset="MCP2515" device="-E/SO"/>
-<part name="IC2" library="SparkFun-DigitalIC" deviceset="MCP2551" device=""/>
+<part name="IC2" library="nickparts" deviceset="MCP2562" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -3889,7 +3896,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <part name="C6" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1u"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="DNP"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="adafruit" deviceset="ARDUINO_R3_ICSP" device=""/>
 <part name="U$2" library="SparkFun-Connectors" deviceset="RJ45-8" device="PTH"/>
@@ -3900,9 +3906,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="120"/>
 <part name="VCC1" library="supply1" deviceset="VCCIO" device=""/>
 <part name="VCC3" library="supply1" deviceset="VCCIO" device=""/>
-<part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
-<part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="18k"/>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="SOLDERJUMPER" device="NC2"/>
 <part name="SJ2" library="SparkFun-Passives" deviceset="SOLDERJUMPER" device="NO"/>
@@ -3910,6 +3913,10 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="P+7" library="supply1" deviceset="V+" device=""/>
+<part name="P+8" library="supply1" deviceset="V+" device=""/>
+<part name="C7" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1u"/>
+<part name="P+9" library="supply1" deviceset="V+" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3937,7 +3944,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <instance part="C6" gate="G$1" x="368.3" y="-12.7"/>
 <instance part="GND9" gate="1" x="368.3" y="-17.78"/>
 <instance part="GND10" gate="1" x="337.82" y="-17.78"/>
-<instance part="R4" gate="G$1" x="419.1" y="-35.56" rot="R90"/>
 <instance part="GND11" gate="1" x="419.1" y="-43.18"/>
 <instance part="U$1" gate="G$1" x="243.84" y="-116.84"/>
 <instance part="U$2" gate="G$1" x="403.86" y="-83.82"/>
@@ -3948,9 +3954,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <instance part="R1" gate="G$1" x="355.6" y="-73.66"/>
 <instance part="VCC1" gate="G$1" x="259.08" y="-121.92"/>
 <instance part="VCC3" gate="G$1" x="287.02" y="15.24"/>
-<instance part="R2" gate="G$1" x="365.76" y="-27.94" rot="R180"/>
-<instance part="R3" gate="G$1" x="358.14" y="-35.56" rot="R270"/>
-<instance part="GND1" gate="1" x="358.14" y="-43.18"/>
 <instance part="P+6" gate="1" x="304.8" y="-83.82"/>
 <instance part="SJ1" gate="1" x="292.1" y="12.7"/>
 <instance part="SJ2" gate="1" x="292.1" y="5.08"/>
@@ -3958,6 +3961,10 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <instance part="P+2" gate="1" x="287.02" y="7.62"/>
 <instance part="+3V1" gate="G$1" x="287.02" y="0"/>
 <instance part="+3V2" gate="G$1" x="251.46" y="-121.92"/>
+<instance part="P+7" gate="1" x="304.8" y="2.54"/>
+<instance part="P+8" gate="1" x="332.74" y="2.54"/>
+<instance part="C7" gate="G$1" x="421.64" y="-22.86"/>
+<instance part="P+9" gate="1" x="416.56" y="-12.7"/>
 </instances>
 <busses>
 </busses>
@@ -4052,10 +4059,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="3"/>
 <wire x1="391.16" y1="-78.74" x2="383.54" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="383.54" y1="-78.74" x2="383.54" y2="-106.68" width="0.1524" layer="91"/>
@@ -4083,8 +4086,15 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <label x="363.22" y="-88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="IC2" gate="G$1" pin="STBY"/>
+<wire x1="408.94" y1="-20.32" x2="419.1" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="419.1" y1="-20.32" x2="419.1" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="419.1" y1="-25.4" x2="419.1" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="419.1" y1="-30.48" x2="419.1" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="421.64" y1="-25.4" x2="419.1" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="419.1" y="-25.4"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -4249,14 +4259,6 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <wire x1="345.44" y1="-76.2" x2="345.44" y2="-73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="RS"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="408.94" y1="-20.32" x2="419.1" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="419.1" y1="-20.32" x2="419.1" y2="-30.48" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="4"/>
@@ -4339,45 +4341,11 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <net name="N$1" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="RXD"/>
-<pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="378.46" y1="-27.94" x2="370.84" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="360.68" y1="-27.94" x2="358.14" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="358.14" y1="-27.94" x2="358.14" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="RXCAN"/>
 <wire x1="330.2" y1="-22.86" x2="358.14" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="358.14" y1="-22.86" x2="358.14" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="358.14" y="-27.94"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="VDD"/>
-<wire x1="330.2" y1="-15.24" x2="332.74" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="332.74" y1="-15.24" x2="332.74" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="337.82" y1="-7.62" x2="332.74" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="332.74" y1="-7.62" x2="332.74" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="332.74" y="-7.62"/>
-<wire x1="332.74" y1="-5.08" x2="332.74" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="SJ1" gate="1" pin="2"/>
-<wire x1="297.18" y1="12.7" x2="299.72" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="12.7" x2="299.72" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="SJ3" gate="1" pin="2"/>
-<wire x1="299.72" y1="5.08" x2="299.72" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="-2.54" x2="297.18" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="SJ2" gate="1" pin="2"/>
-<wire x1="297.18" y1="5.08" x2="299.72" y2="5.08" width="0.1524" layer="91"/>
-<junction x="299.72" y="5.08"/>
-<wire x1="332.74" y1="-2.54" x2="299.72" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="299.72" y="-2.54"/>
-<pinref part="IC1" gate="G$1" pin="RESET"/>
-<wire x1="299.72" y1="-2.54" x2="299.72" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="-27.94" x2="358.14" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="-27.94" x2="358.14" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -4391,6 +4359,47 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="271.78" y1="-129.54" x2="251.46" y2="-129.54" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="-129.54" x2="251.46" y2="-124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="V+" class="0">
+<segment>
+<pinref part="SJ1" gate="1" pin="2"/>
+<wire x1="297.18" y1="12.7" x2="299.72" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="12.7" x2="299.72" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="SJ3" gate="1" pin="2"/>
+<wire x1="299.72" y1="5.08" x2="299.72" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="-2.54" x2="297.18" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="SJ2" gate="1" pin="2"/>
+<wire x1="297.18" y1="5.08" x2="299.72" y2="5.08" width="0.1524" layer="91"/>
+<junction x="299.72" y="5.08"/>
+<junction x="299.72" y="-2.54"/>
+<pinref part="IC1" gate="G$1" pin="RESET"/>
+<wire x1="299.72" y1="-2.54" x2="299.72" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="P+7" gate="1" pin="V+"/>
+<wire x1="299.72" y1="-2.54" x2="304.8" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="-2.54" x2="304.8" y2="0" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="332.74" y1="-5.08" x2="332.74" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="337.82" y1="-7.62" x2="332.74" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="-7.62" x2="332.74" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="332.74" y="-7.62"/>
+<wire x1="332.74" y1="-15.24" x2="332.74" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="VDD"/>
+<wire x1="330.2" y1="-15.24" x2="332.74" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="P+8" gate="1" pin="V+"/>
+<wire x1="332.74" y1="0" x2="332.74" y2="-2.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="VIO"/>
+<wire x1="408.94" y1="-27.94" x2="416.56" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="416.56" y1="-27.94" x2="416.56" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="416.56" y1="-17.78" x2="416.56" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="421.64" y1="-17.78" x2="416.56" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="416.56" y="-17.78"/>
+<pinref part="P+9" gate="1" pin="V+"/>
 </segment>
 </net>
 </nets>
